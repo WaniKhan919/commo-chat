@@ -1,0 +1,186 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App-header {
+  background-color: #075e54;
+  color: white;
+  padding: 16px 0;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.App-header h1 {
+  margin: 0;
+}
+
+.Chat-container {
+  display: flex;
+  align-items: stretch;
+  margin-top: 60px;
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(244, 238, 238);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.Inbox-list {
+  flex: 1;
+  max-width: 260px;
+  border-right: 1px solid #e4e4e4;
+  overflow-y: auto;
+}
+
+.User {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.User:last-child {
+  border-bottom: none;
+}
+
+.User:hover {
+  background-color: #f4f4f4;
+}
+
+.User img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.User .info {
+  flex-grow: 1;
+}
+
+.Message-list {
+  flex: 2;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.Message {
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.User-message {
+  background-color: #d7d7d769;
+  align-self: flex-end;
+  color: black;
+}
+
+.Other-message {
+  background-color: #13262f;
+  color: #ffffff;
+  align-self: flex-start;
+}
+
+.Message-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  background-color: white;
+  border-top: 1px solid #e4e4e4;
+  position: sticky;
+  bottom: -16px;
+  max-width: 100%;
+  width:100%;
+
+}
+
+.Message-input input {
+  flex-grow: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  background-color: #f0f0f0;
+  margin-right: 8px;
+}
+
+.Message-input button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.chatbox-sidebar{
+  padding: 1rem 0;
+  border: 1px solid #f0f1f7;
+  box-shadow: 0px 0px 2px #f0f1f7;
+  border-radius: 12px;
+}
+.chatbox-sidebar .contact{
+  margin-bottom: 0.25rem;
+}
+.chatbox-sidebar .contact.Active-user{
+  padding: 1.2rem 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color .3s;
+  color: white;
+  background-color: #13262f;
+}
+.chatbox-sidebar .contact:hover{
+  background-color: #e4e4e4;
+  color: #13262f;
+}
+.chatbox-main {
+  padding: 1rem 0;
+  border: 1px solid #f0f1f7;
+  box-shadow: 0px 0px 2px #f0f1f7;
+  border-radius: 12px;
+  height: 90vh;
+  overflow-y: scroll;
+  background-color: #ffffff69;
+  display: flex;
+  flex-flow: column;
+}
+.Other-message a{
+  color: white!important;
+}
+.User-message a{
+  color: rgb(0, 153, 255)!important;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #13262f;
+  border-radius: 5px;
+}
